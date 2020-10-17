@@ -1,15 +1,12 @@
 import React, {useState} from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import styles from  './app.module.scss';
+import styles from  './home.module.scss';
 
-function App() {
+export default function Home() {
   const [menuExpanded, setMenuExpanded] = useState(false);
   const onMenuExpand = () => {
     setMenuExpanded(true);
@@ -25,7 +22,7 @@ function App() {
           {menuExpanded ? <div className={styles['menu-overlay']}>
             <FontAwesomeIcon className={styles['menu-icon']} icon={faTimes} onClick={onMenuCollapse}></FontAwesomeIcon>
             <ul className={styles['menu-list']}>
-              <li><a className={styles['menu-link']} href="/contact">Contact Info</a></li>
+              <li><Link className={styles['menu-link']} to="/contact">Contact Info</Link></li>
             </ul>
           </div> : ''}
         
@@ -47,5 +44,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
