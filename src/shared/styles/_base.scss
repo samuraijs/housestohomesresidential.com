@@ -1,0 +1,41 @@
+@font-face {
+  font-family: cardo;
+  src: url(/fonts/Cardo-Regular.ttf);
+}
+
+@font-face {
+  font-family: cardo-bold;
+  src: url(/fonts/Cardo-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: cardo-italic;
+  src: url(/fonts/Cardo-Italic.ttf);
+  font-weight: italic;
+}
+
+@font-face {
+  font-family: cinzel;
+  src: url(/fonts/cinzel.ttf);
+}
+
+body,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
