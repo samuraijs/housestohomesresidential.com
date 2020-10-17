@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import Home from '../home/home.component';
 export default function App() {
-  
   return (
     <Router>
       <Switch>

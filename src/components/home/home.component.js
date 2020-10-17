@@ -18,13 +18,13 @@ export default function Home() {
     <div className={styles.container}>
       <header className={styles.header}>
         <h1>Houses to Homes</h1>
-        {!menuExpanded ? <FontAwesomeIcon className={styles['menu-icon']} icon={faBars} onClick={onMenuExpand}></FontAwesomeIcon> : ''}
+        {/* {!menuExpanded ? <FontAwesomeIcon className={styles['menu-icon']} icon={faBars} onClick={onMenuExpand}></FontAwesomeIcon> : ''}
           {menuExpanded ? <div className={styles['menu-overlay']}>
             <FontAwesomeIcon className={styles['menu-icon']} icon={faTimes} onClick={onMenuCollapse}></FontAwesomeIcon>
             <ul className={styles['menu-list']}>
               <li><Link className={styles['menu-link']} to="/contact">Contact Info</Link></li>
             </ul>
-          </div> : ''}
+          </div> : ''} */}
         
         
         <aside className={styles.contact}>
@@ -35,8 +35,26 @@ export default function Home() {
         <span className={styles.arrow}></span>
       </header>
       <section className={styles.content}>
-        <h2 className={styles.title}>Who are we</h2>
-        <p className={styles.description}>This is our story</p> 
+        <div className={styles.area}>
+          <h2 className={styles.title}>Who are we</h2>
+          <p className={styles.description}>At Houses to Homes PNW LLC, our passion work is actualizing the transformations of buildings into a space that is unique and feels like home. We specialize in renovation and design consulting of residential homes. </p> 
+        </div>
+        <div className={styles.area}>
+          <h2 className={styles.title}>Our Services</h2>
+          <div className={styles.blurb}>
+            <label className={styles.label}>Hourly Consulting</label>
+            <p className={styles['blurb-content']}>"I just need to run through some ideas."</p>
+          </div>
+          <div className={styles.blurb}>
+            <label className={styles.label}>Design Project</label>
+            <p className={styles['blurb-content']}>"I have a team of contractors, I need someone to work with me to pull it together."</p>
+          </div>
+          <div className={styles.blurb}>
+            <label className={styles.label}>Design & Manage Project</label>
+            <p className={styles['blurb-content']}>"I want you to do it all; I have no idea where to start"</p>
+          </div>
+          
+        </div>
       </section>
       <footer className={styles.footer}>
 

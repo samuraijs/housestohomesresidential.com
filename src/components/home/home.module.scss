@@ -1,0 +1,235 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/base';
+
+.container {
+  text-align: center;
+  font-family: cinzel;
+}
+
+.header {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: $white;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
+  @media (min-width: 70em) {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &::before {
+    content: '';
+    background-image: url('/images/house3.jpg');
+    background-size: 170%;
+    background-position: top;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    @media (min-width: 70em) {
+      background-position: 0 -7em;
+      background-size: 100%;
+    }
+  }
+
+  h1 {
+    display: block;
+    font-weight: normal;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    padding: 0.1em 0;
+    width: 10em;
+
+    @media (min-width: 70em) {
+      margin-top: 1.5em;
+      padding: 0.25em 0;
+      width: 15em;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 3%;
+    background-color: $primary-background;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      width: 50%;
+      padding-bottom: inherit;
+      background-color: inherit;
+    }
+    &:before {
+      right: 50%;
+      -ms-transform-origin: 100% 100%;
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      -ms-transform: skewX(45deg);
+      -webkit-transform: skewX(45deg);
+      transform: skewX(45deg);
+    }
+    &:after {
+      left: 50%;
+      -ms-transform-origin: 0 100%;
+      -webkit-transform-origin: 0 100%;
+      transform-origin: 0 100%;
+      -ms-transform: skewX(-45deg);
+      -webkit-transform: skewX(-45deg);
+      transform: skewX(-45deg);
+    }
+  }
+}
+
+.menu-icon {
+  position: absolute;
+  margin-right: 2em;
+  cursor: pointer;
+  right: 0;
+  top: 2em;
+
+  @media (min-width: 70em) {
+    top: 4em;
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $secondary-background;
+  z-index: 3;
+
+  @media (min-width: 70em) {
+    width: 12em;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0;
+    height: 100vh;
+  }
+
+  .menu-list {
+    margin: 2em auto 0 auto;
+
+    @media (min-width: 70em) {
+      text-align: left;
+      margin-left: 1em;
+      margin-top: 5.25em;
+      font-size: 0.75em;
+    }
+  }
+}
+
+.contact {
+  text-align: center;
+  font-family: cardo;
+  margin: 0 auto;
+  width: 20em;
+
+  .contact-link {
+    display: block;
+    text-decoration: none;
+    color: $white;
+    margin: 0.5em 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.content {
+  background: $primary-background;
+  width: 100%;
+  min-height: 30vh;
+  overflow: hidden;
+
+  .title {
+    padding-bottom: 0.25em;
+    font-weight: normal;
+    font-size: 1.5em;
+    color: $white;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 7em;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      border-bottom: 1px solid $white;
+      width: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .area {
+    margin: 2em auto;
+    color: $white;
+    text-align: left;
+    font-size: 1.25em;
+    font-family: cardo;
+    width: 70%;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .blurb {
+      background: $secondary-background;
+      width: 100%;
+      margin: 1em 0;
+
+      @media (min-width: 70em) {
+        width: 40%;
+
+        &:nth-child(even) {
+          margin-left: 0;
+          margin-right: auto;
+        }
+
+        &:nth-child(odd) {
+          margin-left: auto;
+          margin-right: 0;
+        }
+      }
+
+      .label {
+        border-bottom: 1px solid $white;
+        width: calc(100% - 2em);
+        display: block;
+        padding: 1em;
+      }
+
+      .blurb-content {
+        padding: 1em;
+      }
+    }
+  }
+
+  .description {
+    width: 100%;
+    margin: 1em auto;
+  }
+}
