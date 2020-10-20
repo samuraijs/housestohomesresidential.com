@@ -6,7 +6,7 @@
   font-family: cinzel;
 }
 
-.header {
+.fold {
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -15,14 +15,15 @@
   position: relative;
   background-color: rgba(0, 0, 0, 0.6);
   overflow-x: hidden;
+
   @media (min-width: 70em) {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(124, 73, 73, 0.3);
   }
 
   &::before {
     content: '';
     background-image: url('/images/stock1.jpg');
-    background-size: 170%;
+    background-size: 60em;
     background-position: top;
     display: block;
     width: 100%;
@@ -35,24 +36,6 @@
     @media (min-width: 70em) {
       background-position: 0 -7em;
       background-size: 100%;
-    }
-  }
-
-  h1 {
-    display: block;
-    font-weight: normal;
-    margin-top: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-top: 1px solid $white;
-    border-bottom: 1px solid $white;
-    padding: 0.1em 0;
-    width: 10em;
-
-    @media (min-width: 70em) {
-      margin-top: 1.5em;
-      padding: 0.25em 0;
-      width: 15em;
     }
   }
 
@@ -93,53 +76,15 @@
   }
 }
 
-.menu-icon {
-  position: absolute;
-  margin-right: 2em;
-  cursor: pointer;
-  right: 0;
-  top: 2em;
-
-  @media (min-width: 70em) {
-    top: 4em;
-  }
-}
-
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: $secondary-background;
-  z-index: 3;
-
-  @media (min-width: 70em) {
-    width: 12em;
-    position: fixed;
-    top: 0;
-    left: auto;
-    right: 0;
-    height: 100vh;
-  }
-
-  .menu-list {
-    margin: 2em auto 0 auto;
-
-    @media (min-width: 70em) {
-      text-align: left;
-      margin-left: 1em;
-      margin-top: 5.25em;
-      font-size: 0.75em;
-    }
-  }
-}
-
 .contact {
   text-align: center;
   font-family: cardo;
-  margin: 0 auto;
+  margin: 3em auto;
   width: 20em;
+
+  @media (min-width: 70em) {
+    margin: 0 auto;
+  }
 
   .contact-link {
     display: block;
@@ -202,7 +147,7 @@
       margin: 1em 0;
 
       @media (min-width: 70em) {
-        width: 40%;
+        width: 50%;
 
         &:nth-child(even) {
           margin-left: 0;

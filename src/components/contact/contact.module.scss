@@ -1,0 +1,7 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/base';
+
+.container {
+  background: $secondary-background;
+  min-height: 100vh;
+}
