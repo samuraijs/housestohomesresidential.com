@@ -18,6 +18,7 @@
 
   @media (min-width: 70em) {
     background-color: rgba(124, 73, 73, 0.3);
+    padding-top: 2em;
   }
 
   &::before {
@@ -142,9 +143,9 @@
     }
 
     .blurb {
-      background: $secondary-background;
       width: 100%;
       margin: 1em 0;
+      box-shadow: 1px 5px 5px $secondary-background;
 
       @media (min-width: 70em) {
         width: 50%;
@@ -164,7 +165,8 @@
         border-bottom: 1px solid $white;
         width: calc(100% - 2em);
         display: block;
-        padding: 1em;
+        margin-left: 1em;
+        padding-bottom: 1em;
       }
 
       .blurb-content {

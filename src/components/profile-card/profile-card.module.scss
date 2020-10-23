@@ -1,2 +1,114 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/base';
+
+@mixin text() {
+  text-align: center;
+}
+
 .card {
+  border-radius: 4px;
+  width: 17.5em;
+  height: 30em;
+  overflow: hidden;
+  position: relative;
+  margin: 0.5em 0;
+
+  @media (min-width: 70em) {
+    margin: 0;
+  }
+}
+
+.image {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 100%;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: $tertiary-background;
+  height: 40%;
+  width: 100%;
+  color: $white;
+
+  .arrow {
+    position: absolute;
+    top: -0.25em;
+    width: 100%;
+    padding-bottom: 3.5%;
+    background-color: $tertiary-background;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 99%;
+      width: 50%;
+      height: 2em;
+      padding-bottom: inherit;
+      background-color: inherit;
+    }
+    &:before {
+      right: 50%;
+      -ms-transform-origin: 100% 100%;
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      -ms-transform: skewX(45deg);
+      -webkit-transform: skewX(45deg);
+      transform: skewX(45deg);
+    }
+    &:after {
+      left: 50%;
+      -ms-transform-origin: 0 100%;
+      -webkit-transform-origin: 0 100%;
+      transform-origin: 0 100%;
+      -ms-transform: skewX(-45deg);
+      -webkit-transform: skewX(-45deg);
+      transform: skewX(-45deg);
+    }
+  }
+}
+
+.title {
+  @include text();
+  font-size: 1.5em;
+  font-family: cinzel;
+  &:after {
+    content: '';
+    display: block;
+    width: 75%;
+    border-bottom: 1px solid $white;
+    margin: 0.5em auto 0 auto;
+  }
+}
+
+.subtitle {
+  @include text();
+  margin: 0.5em 0;
+  font-family: cardo;
+  font-size: 1.25em;
+}
+
+.info-primary {
+  @include text();
+  font-family: cardo;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.info-secondary {
+  @include text();
+  font-family: cardo;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+.info-tertiary {
+  @include text();
+  font-family: cardo;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
 }

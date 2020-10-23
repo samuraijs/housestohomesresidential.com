@@ -1,0 +1,22 @@
+@mixin title() {
+  padding-bottom: 0.25em;
+  font-family: cardo;
+  font-weight: normal;
+  font-size: 1.5em;
+  color: $white;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 7em;
+  text-align: center;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    border-bottom: 1px solid $white;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

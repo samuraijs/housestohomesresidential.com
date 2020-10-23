@@ -1,7 +1,29 @@
 @import '../../shared/styles/variables';
 @import '../../shared/styles/base';
+@import '../../shared/styles/mixins';
 
 .container {
   background: $secondary-background;
   min-height: 100vh;
+}
+
+.header {
+  @include title;
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
+.content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 70em) {
+    width: 50%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
