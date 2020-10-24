@@ -1,0 +1,70 @@
+@import '../../shared/styles/variables';
+@import '../../shared/styles/base';
+
+.container {
+  padding-top: 0;
+  font-size: calc(10px + 2vmin);
+  font-family: cardo;
+
+  @media (min-width: 70em) {
+    &.entry {
+      padding-top: 4em;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .menu-icon {
+        padding-top: 4em;
+      }
+
+      .menu-overlay {
+        padding-top: 2em;
+      }
+    }
+  }
+}
+.menu-icon {
+  position: absolute;
+  margin-right: 2em;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  padding-top: 1.75em;
+  color: $white;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $secondary-background;
+  z-index: 3;
+  color: $white;
+
+  @media (min-width: 70em) {
+    width: 12em;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .menu-list {
+    margin: 1.75em auto 0 auto;
+
+    @media (min-width: 70em) {
+      text-align: left;
+      margin-left: 2em;
+      margin-top: 2.5em;
+      font-size: 0.75em;
+    }
+
+    .list-item {
+      margin: 1em 0;
+    }
+  }
+}

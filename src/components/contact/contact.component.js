@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../header/header.component';
+import Menu from '../menu/menu.component';
 import ProfileCard from '../profile-card/profile-card.component';
 import styles from './contact.module.scss';
 
@@ -23,6 +24,7 @@ export default function Contact() {
   return (
     <div className={styles.container}>
       <Header />
+      <Menu />
       <h2 className={styles.header}>Contact Info</h2>
       <section className={styles.content}>
         {profiles.map((profile, i) => (

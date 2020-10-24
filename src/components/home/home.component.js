@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '../header/header.component';
+import Menu from '../menu/menu.component';
 import styles from './home.module.scss';
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
     <div className={styles.container}>
       <section className={styles.fold}>
         <Header />
+        <Menu entry={true} />
         <aside className={styles.contact}>
           <p>Begin your Design</p>
           <a

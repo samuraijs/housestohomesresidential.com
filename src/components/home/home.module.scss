@@ -47,6 +47,10 @@
     padding-bottom: 3%;
     background-color: $primary-background;
 
+    @media (min-width: 70em) {
+      z-index: 3;
+    }
+
     &:before,
     &:after {
       content: '';
